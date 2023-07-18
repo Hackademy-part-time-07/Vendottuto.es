@@ -34,7 +34,7 @@
 .card_created{
     position: relative;
     display: flex; /* Muestra el contenido como flexbox */ 
-    margin:1.5vw; /* Ajusta el espaciado interno */
+    margin:5vw; /* Ajusta el espaciado interno */
     flex-direction: column; /* Coloca el contenido en una columna */
     padding: 1.5vw;
     justify-content: space-between; /* Distribuye el contenido verticalmente */
@@ -68,6 +68,7 @@
 }
 
 .position_top input{
+width: 15vw;
 margin: 1vw;
 border-radius:1rem;
 border:1px solid var(--secundario);

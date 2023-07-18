@@ -13,11 +13,11 @@ class RevisorController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('isRevisor');
+        $this->middleware('isRevisor')->except('becomeRevisor','makeRevisor');
     }
    
     public function makeRevisor(User $user){
-        Artisan::call('vendotutto:makeUserRevisor',['email'=>$user->email]);
+        Artisan::call('vendo:tutto',['email'=>$user->email]);
         return redirect()->route('home')->withMessage(['type'=>'success','text'=>'ya tenemos un compagnero más']);
     }
     public function index(){
