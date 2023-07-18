@@ -1,0 +1,87 @@
+.body_create{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+    padding: 3rem;
+}
+/* --esta es la parte del texto y de la imagen-- */
+.texting_create{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.texting_create{
+    height: 55vh;
+    width: 50vw;
+    padding-left:3rem;
+}
+.texting_create h2{
+    font-size: 3rem;
+    margin: 1rem;
+}
+.texting_create p{
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+.texting_create img{
+    display: flex;
+    margin: 3rem;
+    border-radius: 1rem;
+    height:40vh;
+    width: 40vw;
+}
+/* ------------la parte del crear anuncios--------- */
+.card_created{
+    position: relative;
+    display: flex; /* Muestra el contenido como flexbox */ 
+    margin:1.5vw; /* Ajusta el espaciado interno */
+    flex-direction: column; /* Coloca el contenido en una columna */
+    padding: 1.5vw;
+    justify-content: space-between; /* Distribuye el contenido verticalmente */
+    height: 56vh;
+    width: 25vw;
+    box-shadow: 0px 9px 33px -3px var(--shadow);
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--card);
+}
+/* ----posiciones dentro dela Card_body_Created--- */
+.position_top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+/* ----separamos en dos partes el top--- */
+.position_top textarea{
+ height:15vh;
+ margin: 1vw;
+ border:1px solid var(--secundario);
+ border-radius:1rem;
+}
+.position_top textarea:focus{
+    outline: 3px solid var(--secundario);
+}
+.position_top input:focus{
+    outline: 3px solid var(--secundario);
+}
+
+.position_top input{
+margin: 1vw;
+border-radius:1rem;
+border:1px solid var(--secundario);
+}
+
+/* -----y el Down---- */
+.position_down{
+    padding-left: 3rem;
+}
+.position_down input{
+    border-radius: 0.5rem;
+    border: 1px solid var(--secundario);
+}
+.position_down input:focus{
+    outline: 3px solid var(--secundario);
+}
+/* ----final :)--- */
