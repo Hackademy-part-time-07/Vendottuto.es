@@ -1,0 +1,6 @@
+.position_navabar{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end
+}

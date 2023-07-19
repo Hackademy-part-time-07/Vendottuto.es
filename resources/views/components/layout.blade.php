@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/create.css') }}">
     <link rel="stylesheet" href="{{ asset('css/globalstyles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <title>{{ $title ?? 'vendotutto'}}</title>
     @livewireStyles
     @vite(['resources/css/app.css'])

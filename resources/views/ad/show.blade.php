@@ -13,7 +13,7 @@
                         <div class="carousel-inner">
                             @foreach ($ad->images as $image )
                                 <div class="carousel-item @if($loop->first) active @endif">
-                                <img src="{{Storage::url($image->path)}}" alt="..." class="d-block w-100">
+                                    <img src="{{ $image->getUrl(400,300) }}" alt="..." class="d-block w-100">
                                 </div>
                             @endforeach
                         </div>
