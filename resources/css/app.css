@@ -1,2 +1,7 @@
 @import '~bootstrap/dist/css/bootstrap';
 @import '~flag-icon-css/css/flag-icons';
+
+a{
+    color:var(--negro);
+    text-decoration: none;
+ }

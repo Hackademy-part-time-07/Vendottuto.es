@@ -1,0 +1,61 @@
+.main{
+    margin: 0 10vw;
+}
+/* ---esta es la parte del texto-- */
+.position_text{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}
+.position_text h1{
+    font-size: 4rem;
+}
+/* ---aca empieza las pociciones de la card-- */
+
+section{ /* este es el padre */
+    display: flex;
+    max-width: 100vw;
+    flex-direction:row;
+    margin-top: 3rem;   
+    flex-wrap: wrap;
+}
+/* --cuerpo de la card-- */
+.body_card{
+    border-radius: 2rem;
+    width: 23vw;
+    height: 50vh;
+    background-color: rgb(187, 180, 180);
+    padding: 1rem;
+    margin: 2rem;
+    transition: all 0.6s ease;
+}
+.body_card:hover{
+    scale: 1.09;
+}
+/* ---parte de la imagen-- */
+.body_card img{
+    border-radius:0.5rem;
+}
+.text_down{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+.text_down h5{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.text_down button{
+    border: none;
+    background-color: rgb(235, 235, 244);
+    border-radius: 2rem;
+    width: 10vw;
+    margin-top: 3.5rem;
+    transition: 0.5s all ease-in-out;
+}
+.text_down button:hover{
+background-color: var(--btn);
+}
+

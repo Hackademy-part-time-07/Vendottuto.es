@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot name="title">Vendotutto - {{__('Iniciar sesión') }}</x-slot>
+    <div style="margin-top: 2rem;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-3 offset-md-3 ">
@@ -35,4 +36,6 @@
             </div>
         </div>
     </div>
+    </div>
+
 </x-layout>

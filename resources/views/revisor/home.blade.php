@@ -90,8 +90,6 @@
                         <button class="btn btn-success">{{__('Aceptar') }}</button>
                         </form>
                     </div>
-                </div>
-                <div class="row my-3">
                     <div class="col-6">
                         <form action="{{ route('revisor.ad.reject', $ad) }}" method="POST">
                         @csrf

@@ -1,6 +1,33 @@
-.position_navabar{
-    background-color: aqua;
+.position{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    height: 7vh;
+    margin: 0 5vw;
+    align-items: center;
+    padding: 0 5vw;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 47px 4px var(--secundario);
+    background-color:var(--principal);
+    margin-top: 1.5rem;
+}
+.position h2{
     display: flex;
     align-items: center;
-    justify-content:flex-end
+    justify-items: center;
+    padding:0 2vw;
+}
+.position_nav{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding:0 2vw;
+}
+.position_nav li{
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.salir_position a{
+    padding-left: 1.3rem;
 }

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/create.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/globalstyles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/globalstyles.css')}}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cards.css') }}">
     <title>{{ $title ?? 'vendotutto'}}</title>
     @livewireStyles
     @vite(['resources/css/app.css'])
@@ -26,5 +27,5 @@
     @vite(['resources/js/app.js'])
     {{ $script ??''}}
 </body>
-</html><!-- Smile, breathe, and go slowly. - Thich Nhat Hanh -->
+</html>
 </div>

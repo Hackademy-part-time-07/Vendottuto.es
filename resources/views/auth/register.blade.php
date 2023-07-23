@@ -1,6 +1,7 @@
 <x-layout>
     <!--Register-->
-    <div class="container-fluid">
+    <div style="margin-top: 2rem;">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-6 offset-md-3">
                 <!--FORM TITLE-->
@@ -55,6 +56,8 @@
     </div>
 
 </div>
+    </div>
+    
 
 </section>
 </x-layout>

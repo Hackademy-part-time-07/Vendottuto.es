@@ -1,5 +1,5 @@
-<header>
-     @if (session()->has('message'))
+<main>
+   @if (session()->has('message'))
         <div class="alert alert-success" role="alert">
             {{ session('message') }}
         </div>        
@@ -73,4 +73,5 @@
    
     </div>
     
-</header>
+</main>
+   

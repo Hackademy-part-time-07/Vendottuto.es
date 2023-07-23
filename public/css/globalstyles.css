@@ -1,27 +1,32 @@
 :root{
-    --principal: rgb(238, 234, 228);
-    --secundario: rgb(172, 98, 8);
-    --btn:rgb(248, 192, 125);
+    --principal: rgb(255, 255, 255);
+    --secundario: rgb(215, 219, 220);
+    --btn:rgb(255, 255, 255);
     --shadow:rgba(101, 96, 96, 0.8);
     --card:rgb(250, 235, 215);
     --form: rgb(243, 214, 177);
+    --negro: rgb(30, 31, 31);
   }
-
-  .botton{
-    background-color:var(--btn);
-    color: black;
-    border-radius: 1rem;
-  }
-  
+a{
+    color:var(--negro);
+    text-decoration: none;
+ }
+ body{
+    background-color: whitesmoke;
+ }
   *{
     padding: 0;
     margin: 0;
-   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-     box-sizing: border-box;
-  }
-  ul,ol{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    box-sizing: border-box;
+}
+ul,ol{
     list-style: none;
-  }
-  a{
-    text-decoration: none;
-  }
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--negro);
+}
+p,span{
+    color: var(--negro);
+}

@@ -1,6 +1,7 @@
 <x-layout>
         <x-slot name='title'></x-slot> 
-        <div class="container">
+        <div style="margin-top: 2rem;">
+<div class="container">
             <div class="row">
                 <div class="col-12">
                     <h1>Anuncios por categoría: {{ $category->name }}</h1>
@@ -36,6 +37,13 @@
                     <a href="{{ route('ads.create') }}" class="btn btn-success">Vende tu primer objeto'</a> o <a href="{{ route('home') }}" class="btn btn-primary">Vuelve a la Home</a>
                 </div>
             @endforelse
+            
             </div>
+            
         </div>
+        <div class="d-flex justify-content-center d-sm-block mx-5">
+                {{$ads->links()}}
+         </div>
+        </div>
+        
 </x-layout>
