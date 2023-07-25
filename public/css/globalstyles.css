@@ -1,20 +1,21 @@
 :root{
     --principal: rgb(255, 255, 255);
-    --secundario: rgb(215, 219, 220);
+    --secundario: rgb(237, 238, 238);
     --btn:rgb(255, 255, 255);
     --shadow:rgba(101, 96, 96, 0.8);
-    --card:rgb(250, 235, 215);
+    --card:rgb(223, 222, 222);
     --form: rgb(243, 214, 177);
     --negro: rgb(30, 31, 31);
   }
-a{
-    color:var(--negro);
+
+  a{
     text-decoration: none;
- }
+}
  body{
     background-color: whitesmoke;
  }
-  *{
+
+*{
     padding: 0;
     margin: 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;

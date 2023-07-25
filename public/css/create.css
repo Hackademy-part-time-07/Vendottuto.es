@@ -1,45 +1,46 @@
 .body_create{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
     max-width: 100%;
-    padding: 3rem;
+    padding: 2rem;
 }
 /* --esta es la parte del texto y de la imagen-- */
 .texting_create{
-    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .texting_create{
-    height: 55vh;
-    width: 50vw;
-    padding-left:3rem;
+    margin-top:5rem;
+    height: 40vh;
+    width: 40vw;
 }
 .texting_create h2{
     font-size: 3rem;
-    margin: 1rem;
 }
 .texting_create p{
     font-size: 1.3rem;
     margin: 1rem;
 }
 .texting_create img{
+    margin-top: 2rem;
     display: flex;
-    margin: 3rem;
+    align-items: center;
+    justify-content: center;
     border-radius: 1rem;
-    height:40vh;
-    width: 40vw;
+    height:35vh;
+    width: 35vw;
 }
 /* ------------la parte del crear anuncios--------- */
 .card_created{
     position: relative;
     display: flex; /* Muestra el contenido como flexbox */ 
-    margin:5vw; /* Ajusta el espaciado interno */
     flex-direction: column; /* Coloca el contenido en una columna */
     padding: 1.5vw;
     justify-content: space-between; /* Distribuye el contenido verticalmente */
-    height: 56vh;
-    width: 25vw;
+    height: 80vh;
+    width: 30vw;
     box-shadow: 0px 9px 33px -3px var(--shadow);
     border-radius: 1rem;
     overflow: hidden;
@@ -51,12 +52,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 /* ----separamos en dos partes el top--- */
 .position_top textarea{
  height:15vh;
- margin: 1vw;
+ margin: 0.5vw;
  border:1px solid var(--secundario);
  border-radius:1rem;
 }
@@ -68,7 +69,7 @@
 }
 
 .position_top input{
-width: 15vw;
+width: 18vw;
 margin: 1vw;
 border-radius:1rem;
 border:1px solid var(--secundario);
@@ -78,11 +79,39 @@ border:1px solid var(--secundario);
 .position_down{
     padding-left: 3rem;
 }
+.colors{
+    border: none;
+    border-radius: 1rem;
+    border: 1px solid var(--secundario);
+}
+.colors:focus{
+    outline: 3px solid var(--secundario);
+}
 .position_down input{
     border-radius: 0.5rem;
     border: 1px solid var(--secundario);
 }
 .position_down input:focus{
     outline: 3px solid var(--secundario);
+}
+.margin_down{
+    margin-bottom: 3rem;
+}
+.margin_down input{
+    border: none;
+    width: 17vw;
+    background-color: white;
+    border-radius: 1rem; 
+}
+.btn_create{
+    border: none;
+    background-color: var(--secundario);
+    border-radius: 2rem;
+    width: 5vw;
+    margin-top: 1rem;
+    transition: 0.5s all ease-in-out;
+    }
+.btn_create:hover{
+background-color: var(--btn);
 }
 /* ----final :)--- */

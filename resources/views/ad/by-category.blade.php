@@ -1,36 +1,30 @@
 <x-layout>
         <x-slot name='title'></x-slot> 
-        <div style="margin-top: 2rem;">
-<div class="container">
-            <div class="row">
-                <div class="col-12">
+      
+<div class="contenedor_category">
+                <div class="texting_login">
                     <h1>Anuncios por categoría: {{ $category->name }}</h1>
                 </div>
-            </div>
-            <div class="row">
+            <section>
             @forelse ($ads as $ad)
-                <div class="col-12 col-md-4">
-                    <div class="card mb-5">
+                    <div class="categories_card">
                             @if ($ad->images()->count() > 0)
                             <img src="{{Storage::url($ad->images()->first()->path)}}" class="card-img-top" alt="...">
                             @else
-                            <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : 'https://via.placeholder.com/150' }}" alt="..." class="card-img-top">
+                            <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : 'https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg' }}" alt="..." class="card-img-top">
                             @endif
-                        <div class="card-body">
+                        <div class="text_down">
                             <h5 class="card-title">{{ $ad->title }}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{ $ad->price }}</h6>
-                            <p class="card-text">{{ $ad->body }}</p>
+                            <h6 class="card-subtitle mb-2 text-muted">${{ $ad->price }}</h6>
                             <div class="card-subtitle mb-2">
                                 <strong><a href="{{ route('category.ads', $ad->category) }}">#{{ $category->name }}</a></strong>
-                                <i>{{ $ad->created_at->format('d/m/Y') }}</i>
                             </div>
-                            <div class="card-subtitle mb-2">
-                                <small>{{ $ad->user->name }}</small>
-                            </div>
-                            <a class="btn btn-primary" href="{{ route("ads.show", $ad) }}">Mostrar Más</a>
+                            <button>
+                            <a href="{{ route("ads.show", $ad) }}">Mostrar Más</a>
+                            </button>
                         </div>
                     </div>
-                </div>
+              
                 @empty
                 <div class="col-12">
                     <h2>Uyy.. parece que no hay nada de esta categoría</h2>
@@ -38,12 +32,13 @@
                 </div>
             @endforelse
             
-            </div>
-            
-        </div>
-        <div class="d-flex justify-content-center d-sm-block mx-5">
+            </section>
+         
+            <div class="position_paginate">
                 {{$ads->links()}}
-         </div>
+         </div>           
+
         </div>
+
         
 </x-layout>

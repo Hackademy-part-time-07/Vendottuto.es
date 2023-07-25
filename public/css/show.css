@@ -1,0 +1,5 @@
+.contedor_show{
+    display: flex;
+    max-width: 100%;
+    background-color: aqua;
+}

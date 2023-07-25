@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{ asset('css/globalstyles.css')}}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cards.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
     <title>{{ $title ?? 'vendotutto'}}</title>
     @livewireStyles
     @vite(['resources/css/app.css'])
@@ -17,7 +19,7 @@
 <body>
     <x-navbar/>
     @if (session()->has('message'))
-    <x-alert :type="session('message')['type']" :message="session('message')['text']" />
+    <x-alert :type="session('message')['type']" :message="session('message')['text']"/>
     @endif
 
     {{ $slot }}

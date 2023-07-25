@@ -14,11 +14,11 @@
                                 @endif
                             <div class="text_down">
                                 <h5> 
-                                    <b>{{ __('Título') }}: </b>{{ $ad->title }}
+                                    <b>{{ $ad->title }} </b>
                                 </h5>
-                                <h5>
-                                    <b>{{ __('Precio') }}:</b>{{ $ad->price }}
-                                </h5>
+                                <h6>
+                                    <b>${{ $ad->price }} </b>
+                                </h6>
                                 <button>
                                     <a href="{{ route("ads.show", $ad) }}">{{ __('Mostrar Más') }}</a>
                                 </button>                                

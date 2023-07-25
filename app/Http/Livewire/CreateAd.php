@@ -1,5 +1,8 @@
 <?php
 namespace App\Http\Livewire;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionRemoveFaces;
+use App\Jobs\GoogleVisionSafeSearchImage;
 use App\Jobs\ResizeImage;
 use App\Models\Ad;
 use Livewire\Component;
@@ -7,6 +10,7 @@ use Livewire\WithFileUploads;
 use App\Models\Category;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Bus;
 
 class CreateAd extends Component
 {
@@ -46,15 +50,22 @@ use WithFileUploads;
         Auth::user()->ads()->save($ad);
         if(count($this->images)){
             $newFileName="ads/$ad->id";
+
             foreach ($this->images as $image){
                 $newImage=$ad->images()->create([
                     'path'=>$image->store($newFileName,'public')
                 ]);
-                dispatch(new ResizeImage($newImage->path,400,400));
-                dispatch(new ResizeImage($newImage->path,400,300));
+                Bus::chain([
+                new GoogleVisionRemoveFaces($newImage->id),
+                new ResizeImage($newImage->path,400,300),
+                new GoogleVisionSafeSearchImage($newImage->id),
+                new GoogleVisionLabelImage($newImage->id),
+                ])->dispatch();
+                // dispatch(new ResizeImage($newImage->path,400,400));
 
+               
             }
-            File::deleteDirectory(storage_path('/app/livewire-tm'));
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
         session()->flash('message', 'Anuncio creado con éxito');
@@ -83,7 +94,7 @@ use WithFileUploads;
         $this->body = "";
         $this->category="";
         $this->price = "";
-
+        $this->images=[];
     }
 
 

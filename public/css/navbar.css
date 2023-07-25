@@ -2,10 +2,10 @@
     display: flex;
     justify-content: space-between;
     width: 90vw;
-    height: 7vh;
+    height: 10vh;
     margin: 0 5vw;
     align-items: center;
-    padding: 0 5vw;
+    padding:0 2vw;
     border-radius: 1rem;
     box-shadow: 0px 10px 47px 4px var(--secundario);
     background-color:var(--principal);
@@ -18,13 +18,12 @@
     padding:0 2vw;
 }
 .position_nav{
-    display: flex;
+    display:flex;
     align-items: center;
-    justify-items: center;
-    padding:0 2vw;
+    justify-content: center;
 }
 .position_nav li{
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 1.2rem;
 }
 

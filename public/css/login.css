@@ -1,0 +1,82 @@
+
+.background_font{
+    max-width: 100vw;
+    margin: 0 5vw;
+    padding: 1rem;
+}
+.texting_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+.position_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.position_body form{
+    padding: 1rem;
+    height: 40vh;
+    width: 20vw;
+    background-color:var(--card);
+    border-radius: 1.5rem;
+    box-shadow: 0px 10px 47px 4px var(--secundario);
+}
+.input_down{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding: 2px;
+}
+.input_down input{
+    border-radius: 2rem;
+    margin: 0.5rem;
+    padding: 5px;
+    border:1px solid var(--secundario);
+    transition: 0.5s all ease-in-out;
+}
+.input_down input:focus{
+    outline: 3px solid var(--secundario);
+}
+.input_down button{
+    border: none;
+    background-color: var(--secundario);
+    border-radius: 2rem;
+    width: 10vw;
+    margin-top: 2rem;
+    transition: 0.5s all ease-in-out;
+    }
+.input_down button:hover{
+background-color: var(--btn);
+}
+.input_down p{
+margin: 2rem;
+}   
+
+.position_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.position_login form{
+    padding: 1rem;
+    height: 50vh;
+    width: 20vw;
+    background-color:var(--card);
+    border-radius: 1.5rem;
+    box-shadow: 0px 10px 47px 4px var(--secundario);
+}
+.linear{
+    padding-left: 4.5rem;
+}
+.linear2{
+    margin-top: 2.5rem;
+    padding-left: 4.5rem;
+    margin-bottom: 2rem;
+}
+.p_position{
+    padding-left: 1rem;
+}

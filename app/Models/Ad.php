@@ -6,12 +6,21 @@ use App\Models\Image;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
-
+use Laravel\Scout\Searchable;
 class Ad extends Model
-{
+{  
+    use HasFactory, Searchable;
     protected $fillable=['title','body','price'];
-    use HasFactory;
 
+  
+
+    public function toSearchableArray()
+    {
+        return[
+            'title'=>$this->title,
+            'body'=>$this->body,
+        ];
+    }
     public function user(){
         return $this->belongsTo(User::class);
     }

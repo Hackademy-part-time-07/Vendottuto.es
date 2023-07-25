@@ -1,10 +1,7 @@
 <nav class="position" >
-      <h2> <a role="button" aria-expanded="false" href="{{ route('home') }}">Vendotutto</a></h2>
+      <h2> <a  aria-expanded="false" href="{{ route('home') }}">Vendotutto</a></h2>
     
       <ol class="position_nav">
-        <li >
-          <a href="{{ route('home') }}">Home</a>
-        </li>
         <li >
           <a href="{{ route('ads.create') }}">{{ __('Crear anuncio') }}</a>
         </li>
@@ -72,6 +69,12 @@
             <li>
               <x-locale lang="es" country="es"/>
             </li>
+        </li>
+        <li>
+          <form action="{{ route('search') }}" method="GET" role="search">
+          <input type="search" placeholder="search" name="q" aria-label="search">
+          <button type="submit"><i class="bi-search"></i></button>
+        </form>
         </li>
         
       </ol>

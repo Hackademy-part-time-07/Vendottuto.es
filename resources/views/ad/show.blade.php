@@ -1,8 +1,8 @@
 <x-layout>
-    <div style="margin-top: 2rem;">
-    <div class="container">
+
+    <div class="contedor_show">
             <div class="d-flex justify-content-center my-5">
-                <div class="col-12 col-md-6">
+                
 
                         <div id="adImages" class="carousel slide" data-bs-ride="true">
                     
@@ -36,12 +36,9 @@
                         <div><b>{{__('Publicado el') }}: </b>{{ $ad->created_at->format('d/m/Y') }}</div>
                         <div><b>{{__('Por') }}: </b>{{ $ad->user->name}}</div>
                         <div><a href="{{ route('category.ads', $ad->category) }}" >#{{ $ad->category->name }}</a></div>
+                        <b>{{ $ad->user->name}}</b>
                     </div>
-                </div>
-                </div>
             </div>
-    </div>
-   
         
-    
+    </div>
     </x-layout>

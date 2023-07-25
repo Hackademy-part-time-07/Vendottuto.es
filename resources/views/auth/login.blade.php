@@ -1,12 +1,9 @@
 <x-layout>
-    <x-slot name="title">Vendotutto - {{__('Iniciar sesión') }}</x-slot>
-    <div style="margin-top: 2rem;">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-3 offset-md-3 ">
-
-                <h2 class="form-title space-around">{{__('Iniciar sesión') }}</h2>
-
+<x-slot name="title">Vendotutto - {{__('Iniciar sesión') }}</x-slot>
+        <div class="background_font" >
+                <div class=" texting_login">
+                    <h2>{{__('Iniciar sesión') }}</h2>
+                </div>
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -17,25 +14,27 @@
                 </div>
                 @endif
 
-                <form action="/login" method="POST" role="form" class="form-control formularios">
+            <div class="position_body">
+                <form action="/login" method="POST" role="form" >
                     @csrf
-                    <div class="space-around my-2">
-                        <input type="email" name="email" id="email" class="form-control forms_field-input" placeholder="{{__('Tu correo') }}" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="input_down">
+                        <input type="email" name="email" id="email"  placeholder="{{__('Tu correo') }}" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                         <div class="validate"></div>
-                    </div>
-                    <div class="space-around my-2">
-                        <input type="password" name="password" id="password" class="form-control forms-field-input" placeholder="{{__('Tu contrseña') }}">
-                        <div class="validate"></div>
-                    </div>
-                    <button type="submit" class="btn btn-info">
-                        {{__('Entrar') }}
-                    </button>
-                </form>
 
-                <p class="my-3">{{__('¿Aún no eres de los nuestros?') }} <a href="{{ route('register') }}" class="btn btn-info btn-sm ms-2">{{__('Registrate!') }}</a></p>
-            </div>
+                        <input type="password" name="password" id="password" placeholder="{{__('Tu contraseña') }}">
+                        <div class="validate"></div>
+                    </div>
+                    <div class="input_down">
+                        <button class="" type="submit">{{__('Entrar') }}
+                        </button>
+
+                    </div>
+                        <hr class="linear2" >
+                    <p class="p_position">{{__('¿Aún no eres de los nuestros?') }} <a href="{{ route('register') }}">{{__('Registrate!') }}</a>
+                    </p>
+                </form>
+            </div>        
         </div>
-    </div>
-    </div>
+
 
 </x-layout>

@@ -1,11 +1,12 @@
 <x-layout>
     <!--Register-->
-    <div style="margin-top: 2rem;">
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-6 offset-md-3">
+    <div class="contenedor">
+        <div class="background_font">
                 <!--FORM TITLE-->
-                    <h2 class="form-title space-around">Crear cuenta</h2>
+                <div class="texting_login">
+                    <h2 >{{__('Registrate!') }}</h2>                    
+                </div>
+
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -15,49 +16,44 @@
                         </ul>
                     </div>
                 @endif
-
+            <div class="position_login">
                 <!--FORM FIELDS-->
-                <form action="/register" method="POST" role="form" class="form-control formularios">
+                <form action="/register" method="POST" role="form">
                     @csrf
                     <!--Name-->
-                    <div class="space-around my-2">
-                        <input type="text" name="name" id="name" class="form-control forms-field-input" placeholder="Tu nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars"><!--si no vale es _ en forms_field-->
+                    <div class="input_down">
+                        <input type="text" name="name" id="name" placeholder="{{__('Tu nombre') }}" data-rule="minlen:4" data-msg="Please enter at least 4 chars"><!--si no vale es _ en forms_field-->
                         <div class="validate"></div>
-
-                    </div>
                     <!-- Email-->
-                    <div class="space-around my-2">
-                        <input type="email" name="email" id="email" class="form-control forms_field-input" placeholder="Tu correo" data-rule="minlen:4" data-msg="PLease enter at least 4 chars">
+                        <input type="email" name="email" id="email" placeholder="{{__('Tu correo') }}" data-rule="minlen:4" data-msg="PLease enter at least 4 chars">
                         <div class="validate"></div>
-
-                    </div>
+                    </div>        
+                        <hr class="linear">
                     <!--Password-->
-                    <div class="space-around my-2">
-                        <input type="password" name="password" id="password" class="form-control forms_field-input" placeholder="Tu contraseña">
+                    <div class="input_down">
+                        <input type="password" name="password" id="password"  placeholder="{{__('Tu contraseña') }}">
                         <div class="validate"></div>
-
-                    </div>
                     <!--Password Confirmation-->
-                    <div class="space-around my-2">
-                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control forms_field-input" placeholder="Tu contraseña otra vez">
+                        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="{{__('Tu contraseña otra vez') }}">
                         <div class="validate"></div>
-
+                        <!-- Button-Register-->
+                        <button type="submit">
+                            {{__('Registrar') }}
+                        </button>
+                    <p class="p_position">{{__('¿Ya eres de los nuestros?')}}<a href="{{route('login')}}">{{__('¡Entra ya!')}}</a>
+                    </p>             
                     </div>
-                    <!-- Button-Register-->
-                    <button type="submit" class="btn btn-info">
-                        Crear cuenta
-                    </button>
+       
+                
                 </form>
 
-                <p class="my-3">¿Ya eres de los nuestros?<a href="{{ route('login') }}" class="btn btn-info btn-sm ms-2">Entra!</a></p>
+
+            
+            </div>
+
 
         </div>
 
     </div>
 
-</div>
-    </div>
-    
-
-</section>
 </x-layout>
