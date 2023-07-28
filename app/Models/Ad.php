@@ -9,18 +9,14 @@ use App\Models\User;
 use Laravel\Scout\Searchable;
 class Ad extends Model
 {  
-    use HasFactory, Searchable;
     protected $fillable=['title','body','price'];
+    
+    use HasFactory, Searchable;
+
 
   
 
-    public function toSearchableArray()
-    {
-        return[
-            'title'=>$this->title,
-            'body'=>$this->body,
-        ];
-    }
+
     public function user(){
         return $this->belongsTo(User::class);
     }
@@ -40,5 +36,12 @@ class Ad extends Model
     static public function ToBeRevisionedCount()
     {
         return Ad::where('is_accepted', null)->count();
+    }    
+    public function toSearchableArray()
+    {
+        return[
+            'title'=>$this->title,
+            'body'=>$this->body,
+        ];
     }
 }

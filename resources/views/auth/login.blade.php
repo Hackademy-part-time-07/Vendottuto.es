@@ -24,12 +24,11 @@
                         <input type="password" name="password" id="password" placeholder="{{__('Tu contraseña') }}">
                         <div class="validate"></div>
                     </div>
-                    <div class="input_down">
+                    <div class="text_down">
                         <button class="" type="submit">{{__('Entrar') }}
                         </button>
-
                     </div>
-                        <hr class="linear2" >
+                    <hr class="linear2" >
                     <p class="p_position">{{__('¿Aún no eres de los nuestros?') }} <a href="{{ route('register') }}">{{__('Registrate!') }}</a>
                     </p>
                 </form>

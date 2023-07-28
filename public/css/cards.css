@@ -27,6 +27,7 @@ section{ /* este es el padre */
     width: 20vw;
     height: 45vh;
     background-color:var(--card);
+    box-shadow: 0px 10px 47px 4px var(--secundario);
     padding: 1rem;
     margin: 1rem;
     transition: all 0.6s ease;
@@ -58,7 +59,7 @@ section{ /* este es el padre */
     background-color: var(--secundario);
     border-radius: 2rem;
     width: 10vw;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     transition: 0.5s all ease-in-out;
 }
 .text_down button:hover{
@@ -70,6 +71,7 @@ background-color: var(--btn);
     width: 20vw;
     height: 48vh;
     background-color:var(--card);
+    box-shadow: 0px 10px 47px 4px var(--secundario);
     padding: 1rem;
     margin: 1rem;
     transition: all 0.6s ease;
@@ -83,4 +85,41 @@ background-color: var(--btn);
     justify-content: center;
     align-items: center;
     padding-top: 5rem;
+}
+.texting_category{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 450px) {
+    .position_text h1{
+        padding-left: 3rem;
+        font-size: 2rem;
+    }
+    section{
+        flex-direction:column;
+    }
+    .body_card{
+        width: 70vw;
+    }
+    .text_down button{
+        width:50vw; 
+    }
+
+    /* ------parte del categories--- */
+    
+    .categories_card{
+        width: 80vw;
+    }
+    .texting_category{
+        margin-top: 2rem;
+    }
+    .texting_category h1{
+        padding-left: 1rem;
+        font-size: 1.3rem;
+    }
+    .position_paginate h2{
+        font-size: 1.3rem;
+    }
 }

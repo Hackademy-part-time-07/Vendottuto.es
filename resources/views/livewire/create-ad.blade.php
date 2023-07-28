@@ -10,7 +10,7 @@
 
             <h2><b>{{ __('Crea un nuevo anuncio') }}</b></h2>
             
-            <p>Despierta tu pasión. Únete a nuestra comunidad y comienza a vivir la vida que siempre soñaste crear! <b>Que estas esperando?</b></p>
+            <p>Despierta tu pasión!!!. Únete a nuestra comunidad y comienza a vivir la vida que siempre soñaste crear! <b>Que estas esperando?</b></p>
             <img src="https://ayvisa.es/wp-content/uploads/2021/03/imagenes-para-paginas-web.jpg" alt="img_create">
         </div>
         <form class="card_created" wire:submit.prevent="store">
@@ -58,7 +58,7 @@
                     <p>{{__('Vista previa') }}:</p>
                     <div class="row">
                         @foreach ($images as $key=>$image)
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-4 text_down_2">
                                 <img src="{{ $image->temporaryUrl()}}" alt="" class="img-fluid">
                                 <button type="button" class="btn btn-danger" wire:click="removeImage({{ $key }})">Eliminar</button>
                             </div>

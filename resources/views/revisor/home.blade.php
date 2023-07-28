@@ -3,26 +3,26 @@
     <div class="container my-5 py-5">
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2">
-                <div class="card formularios">
+                <div class="card formularios box_shadow">
                     <div class="card-header">
                         {{__('Anuncio') }} {{ $ad->id }}
                     </div>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3" style="padding-left: 5rem; margin-top:1rem;" >
                             <b>{{ __('Imágenes') }}</b>
                         </div>
-                        <div class="col-9">
+                        <div class="col-9" style="margin-top:1.5rem;">
                             <div class="row">
                                 @forelse ($ad->images as $image )
                                     <div class="col-md-4">
                                         <img src="{{$image->getUrl(400,300)}}" class="img-fluid" alt="...">
                                     </div>
-                                    <div class="col-md-8">
-                                        Adult:<i class="bi bi-circle-fill {{$image->adult}}"></i>[{{ $image->adult }}]<br>
-                                        Spoof:<i class="bi bi-circle-fill {{$image->spoof}}"></i>[{{ $image->spoof }}]<br>
-                                        Medical:<i class="bi bi-circle-fill {{$image->medical}}"></i>[{{ $image->medical }}] <br>
-                                        Violence:<i class="bi bi-circle-fill {{$image->violence}}"></i>[{{ $image->violence}}] <br>
-                                        Racy:<i class="bi bi-circle-fill {{$image->racy}}"></i>[{{$image->racy}}]
+                                    <div class="col-md-8" style="padding:2.5rem;">
+                                       <b>Adult:</b><i class="bi bi-circle-fill {{$image->adult}}"></i>[{{ $image->adult }}]<br>
+                                        <b>Spoof:</b><i class="bi bi-circle-fill {{$image->spoof}}"></i>[{{ $image->spoof }}]<br>
+                                        <b>Medical:</b><i class="bi bi-circle-fill {{$image->medical}}"></i>[{{ $image->medical }}] <br>
+                                        <b>Violence:</b><i class="bi bi-circle-fill {{$image->violence}}"></i>[{{ $image->violence}}] <br>
+                                        <b>Racy:</b><i class="bi bi-circle-fill {{$image->racy}}"></i>[{{$image->racy}}]
                                         <br><br>
                                         
                                         <b>Labels</b> <br>
@@ -30,9 +30,11 @@
                                         <a href="#" class="btn btn-info btn-sm m-1">{{$label}}</a>
                                         @endforeach
                                         <br><br>
-                                        id:{{$image->id}}<br>
-                                        path:{{$image->path}}<br>
-                                        url:{{ Storage::url($image->path)}}<br>
+                                        <b>id:</b>{{$image->id}}<br>
+                                        <b>path:</b>{{$image->path}}<br>
+                                        <b>url:</b>{{ Storage::url($image->path)}}
+                                        <br>
+                                        <br>
                                     </div>
                                 @empty
                                     <div class="col 12">
@@ -43,7 +45,8 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="card-body">
+                    
+                    <div class="card-body" style="margin-top:0.5rem; ">
                         <div class="row">
                             <div class="col-md-3">
                                 <b>{{__('Usuario') }}</b>
@@ -98,27 +101,38 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+
                 </div>
-                <div class="row my-3">
-                    <div class="col-6">
+                    
+
+
+
+                
+            </div>
+        </div>
+
+        <div class="text_center_2">
+                    <div >
                         <form action="{{ route('revisor.ad.accept', $ad) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-success">{{__('Aceptar') }}</button>
+                        <button class="button">{{__('Aceptar') }}</button>
                         </form>
                     </div>
-                    <div class="col-6">
+                    <div >
                         <form action="{{ route('revisor.ad.reject', $ad) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-danger">{{__('Rechazar') }}</button>
+                        <button class="button_2">{{__('Rechazar') }}</button>
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
     </div>
     @else
-    <h3 class="text-center">{{__('No hay anuncios para revisar, vuelve más tarde, gracias.') }}</h3>
+    <h3 class="text_center">{{__('No hay anuncios para revisar, vuelve más tarde, gracias.') }}</h3>
     @endif
 </x-layout>

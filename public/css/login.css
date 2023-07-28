@@ -41,20 +41,40 @@
 .input_down input:focus{
     outline: 3px solid var(--secundario);
 }
-.input_down button{
+.input_down p{
+margin: 2rem;
+}
+.input_down_2 p{
+    margin: 2rem;
+}
+.input_down_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 2px;
+}   
+.input_down_2 input{
+    border-radius: 2rem;
+    margin: 0.5rem;
+    padding: 5px;
+    border:1px solid var(--secundario);
+    transition: 0.5s all ease-in-out;
+}
+.input_down_2 input:focus{
+    outline: 3px solid var(--secundario);
+}
+.input_down_2 button{
     border: none;
     background-color: var(--secundario);
     border-radius: 2rem;
     width: 10vw;
     margin-top: 2rem;
-    transition: 0.5s all ease-in-out;
-    }
-.input_down button:hover{
-background-color: var(--btn);
+    transition: 0.5s all ease-in-out;   
 }
-.input_down p{
-margin: 2rem;
-}   
+.input_down_2 button:hover{
+    background-color:var(--btn);
+}
 
 .position_login{
     display: flex;
@@ -70,6 +90,7 @@ margin: 2rem;
     box-shadow: 0px 10px 47px 4px var(--secundario);
 }
 .linear{
+    margin-top: 2.5rem;
     padding-left: 4.5rem;
 }
 .linear2{
@@ -79,4 +100,20 @@ margin: 2rem;
 }
 .p_position{
     padding-left: 1rem;
+}
+
+@media only screen and (max-width:450px){
+    .position_body form{
+        width: 70vw;
+    }
+    .input_down button{
+        width: 50vw;
+    }
+    .position_login form{
+        width: 80vw;
+    }
+    .input_down_2 button{
+        width: 50vw;
+    }
+
 }

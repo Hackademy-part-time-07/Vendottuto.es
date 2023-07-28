@@ -1,9 +1,9 @@
 :root{
     --principal: rgb(255, 255, 255);
-    --secundario: rgb(237, 238, 238);
-    --btn:rgb(255, 255, 255);
+    --secundario: rgb(233, 234, 234);
+    --btn:rgb(248, 248, 248);
     --shadow:rgba(101, 96, 96, 0.8);
-    --card:rgb(223, 222, 222);
+    --card: rgb(255, 255, 255);
     --form: rgb(243, 214, 177);
     --negro: rgb(30, 31, 31);
   }
@@ -12,7 +12,7 @@
     text-decoration: none;
 }
  body{
-    background-color: whitesmoke;
+    background-color: rgb(238, 238, 238);
  }
 
 *{

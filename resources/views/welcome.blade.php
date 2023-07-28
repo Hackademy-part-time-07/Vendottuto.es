@@ -20,7 +20,7 @@
                                     <b>${{ $ad->price }} </b>
                                 </h6>
                                 <button>
-                                    <a href="{{ route("ads.show", $ad) }}">{{ __('Mostrar Más') }}</a>
+                                    <a href="{{ route("ads.show", $ad) }}">{{ __('Mostrar') }}</a>
                                 </button>                                
                             </div>     
 

@@ -2,8 +2,10 @@
       <h2> <a  aria-expanded="false" href="{{ route('home') }}">Vendotutto</a></h2>
     
       <ol class="position_nav">
-        <li >
-          <a href="{{ route('ads.create') }}">{{ __('Crear anuncio') }}</a>
+        <li class="button_create" >
+          <button>
+            <a href="{{ route('ads.create') }}">{{ __('Crear anuncio') }}</a>
+          </button>
         </li>
         <li >
             <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,10 +73,10 @@
             </li>
         </li>
         <li>
-          <form action="{{ route('search') }}" method="GET" role="search">
-          <input type="search" placeholder="search" name="q" aria-label="search">
-          <button type="submit"><i class="bi-search"></i></button>
-        </form>
+            <form action="{{ route('search') }}" class="d-flex" method="GET" role="search">
+            <input class="form-control me-2" type="search" placeholder="search" name="q" aria-label="search">
+            <button class="btn btn-outline-secondary" type="submit"><i class="bi-search"></i></button>
+            </form>
         </li>
         
       </ol>

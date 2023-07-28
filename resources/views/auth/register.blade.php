@@ -28,9 +28,8 @@
                         <input type="email" name="email" id="email" placeholder="{{__('Tu correo') }}" data-rule="minlen:4" data-msg="PLease enter at least 4 chars">
                         <div class="validate"></div>
                     </div>        
-                        <hr class="linear">
                     <!--Password-->
-                    <div class="input_down">
+                    <div class="input_down_2">
                         <input type="password" name="password" id="password"  placeholder="{{__('Tu contraseña') }}">
                         <div class="validate"></div>
                     <!--Password Confirmation-->
@@ -40,10 +39,11 @@
                         <button type="submit">
                             {{__('Registrar') }}
                         </button>
-                    <p class="p_position">{{__('¿Ya eres de los nuestros?')}}<a href="{{route('login')}}">{{__('¡Entra ya!')}}</a>
-                    </p>             
+                          
                     </div>
-       
+                    <hr class="linear">
+                    <p class="p_position">{{__('¿Ya eres de los nuestros?')}}<a href="{{route('login')}}">{{__('¡Entra ya!')}}</a>
+                    </p>        
                 
                 </form>
 
